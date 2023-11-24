@@ -32,13 +32,13 @@
                         <div class="row push">
                             <div class="col-lg-6 col-xl-6">
                                 <div class="mb-4">
-                                    <label class="form-label" for="example-text-input">Name</label>
+                                    <label class="form-label" for="example-text-input">Wallet Name</label>
                                     <input type="text" class="form-control" id="example-text-input" name="name">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xl-6">
                                 <div class="mb-4">
-                                    <label class="form-label" for="example-email-input">Value</label>
+                                    <label class="form-label" for="example-email-input">Wallet Address</label>
                                     <input type="text" class="form-control" id="example-email-input" name="value" >
                                 </div>
                             </div>

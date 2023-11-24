@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 use Livewire\Livewire;
 
 
-Route::view('/', 'auth.login')->name('login');
+Route::view('/', 'auth.login')->name('index');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -48,9 +48,7 @@ class RegisteredUserController extends Controller
         ]);
 
         event(new Registered($user));
-
         Auth::login($user);
-
         return redirect(RouteServiceProvider::HOME)->with('success', "Account Created Successfully, Proceed With KYC");
     }
 }

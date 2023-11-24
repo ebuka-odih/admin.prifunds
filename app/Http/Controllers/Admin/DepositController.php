@@ -60,4 +60,5 @@ class DepositController extends Controller
         return redirect()->back()->with('success', 'deposit send successfully');
     }
 
+
 }

@@ -19,7 +19,7 @@
             <div class="block block-rounded">
 
                 <div class="block-content">
-                    <a href="" class="btn btn-primary mt-2">Add Property</a>
+                    <a href="" class="btn btn-primary m-3">Add Property</a>
 
                     <table class="table table-orders">
                         <thead class="tb-odr-head">

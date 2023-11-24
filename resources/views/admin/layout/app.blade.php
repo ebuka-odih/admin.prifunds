@@ -143,12 +143,12 @@
                         </a>
                         <ul class="nav-main-submenu">
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.stock.index') }}">
+                                <a class="nav-main-link" href="{{ route('admin.property.index') }}">
                                     <span class="nav-main-link-name">Invested Properties</span>
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.stock.create') }}">
+                                <a class="nav-main-link" href="{{ route('admin.property.create') }}">
                                     <span class="nav-main-link-name">Add Property</span>
                                 </a>
                             </li>

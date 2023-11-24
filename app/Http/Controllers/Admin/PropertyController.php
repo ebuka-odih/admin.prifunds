@@ -16,7 +16,8 @@ class PropertyController extends Controller
 
     public function create()
     {
-        return view('admin.property.create');
+        $properties = Property::all();
+        return view('admin.property.create', compact('properties'));
     }
 
     public function store(Request $request)

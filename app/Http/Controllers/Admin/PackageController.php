@@ -11,12 +11,13 @@ class PackageController extends Controller
     public function index()
     {
         $packages = Package::all();
-        return view('admin.package.list', compact('packages'));
+        return view('admin.transaction.package-invested', compact('packages'));
     }
 
     public function create()
     {
-        return view('admin.package.create');
+        $packages = Package::all();
+        return view('admin.package.create', compact('packages'));
     }
 
 
@@ -24,7 +25,7 @@ class PackageController extends Controller
     {
         $data = $this->getData($request);
         Package::create($data);
-        return redirect()->route('admin.package.index');
+        return redirect()->back()->with('success', "Package added successfully");
     }
 
 

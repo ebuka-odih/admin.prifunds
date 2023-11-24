@@ -166,7 +166,7 @@
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.stock.create') }}">
+                                <a class="nav-main-link" href="{{ route('admin.package.create') }}">
                                     <span class="nav-main-link-name">Add Plans</span>
                                 </a>
                             </li>

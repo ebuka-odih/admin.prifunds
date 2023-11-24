@@ -64,6 +64,7 @@ class PackageController extends Controller
             'max_deposit' => 'required',
             'term_days' => 'required',
             'daily_interest' => 'required',
+            'tag' => 'nullable',
         ];
         return $request->validate($rules);
     }

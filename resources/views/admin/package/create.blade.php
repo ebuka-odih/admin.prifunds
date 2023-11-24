@@ -44,6 +44,7 @@
                             <th>Name</th>
                             <th>Term Day(s)</th>
                             <th>Daily Interest(%)</th>
+                            <th>Tag</th>
                             <th class="d-none d-sm-table-cell" style="width: 15%;">Min Deposit</th>
                             <th class="d-none d-sm-table-cell" style="width: 15%;">Max Deposit</th>
                             <th class="text-center" style="width: 100px;">Actions</th>
@@ -61,6 +62,9 @@
                                 </td>
                                 <td class="fw-semibold">
                                     {{ $item->daily_interest }}
+                                </td>
+                                <td class="fw-semibold">
+                                    <span class="badge bg-primary">{{ $item->tag }}</span>
                                 </td>
                                 <td class="d-none d-sm-table-cell">
                                     ${{ $item->min_deposit }}
@@ -154,6 +158,10 @@
                                             <label class="form-label" for="example-password-input">Max Deposit</label>
                                             <input type="number" class="form-control" id="example-password-input" name="max_deposit" >
                                         </div>
+                                    </div>
+                                    <div class="mb-4 col-lg-12">
+                                        <label class="form-label" for="example-password-input">Tag (Optional)</label>
+                                        <input type="text" class="form-control" id="example-password-input" name="tag" >
                                     </div>
 
                                     <button type="submit" class="btn btn-secondary">Save</button>

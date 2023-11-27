@@ -50,4 +50,44 @@ class AdminStockController extends Controller
         return redirect()->back()->with('success', 'Created Successfully');
     }
 
+    public function edit($id)
+    {
+        $stock = Stock::findOrFail($id);
+        return view('admin.stock.edit', compact('stock'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = $request->validate([
+            'name' => 'required',
+            'min_price' => 'required',
+            'description' => 'nullable',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
+        ]);
+
+        $stock = Stock::findOrFail($id);
+        $stock->update($data);
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $input['imagename'] = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('/files');
+            $image->move($destinationPath, $input['imagename']);
+
+            $stock->update(['image' => $input['imagename']]);
+            $stock->update($data);
+            return redirect()->route('admin.stock.create');
+        }
+        $stock->update($data);
+        return redirect()->route('admin.stock.create');
+
+    }
+
+    public function destroy($id)
+    {
+        $stock = Stock::findOrFail($id);
+        $stock->delete();
+        return redirect()->back();
+    }
+
+
 }

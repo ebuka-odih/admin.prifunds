@@ -45,7 +45,7 @@ class PackageController extends Controller
         $package = Package::findOrFail($id);
         $data = $this->getData($request);
         $package->update($data);
-        return redirect()->route('admin.package.index');
+        return redirect()->route('admin.package.create');
     }
 
 

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminFundingController;
+use App\Http\Controllers\Admin\AdminImageController;
 use App\Http\Controllers\Admin\AdminPaymentMethodController;
 use App\Http\Controllers\Admin\AdminStockController;
 use App\Http\Controllers\Admin\AdminTradesController;
@@ -43,6 +44,12 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'admin', 'as' =>
     Route::resource('stock', AdminStockController::class);
     Route::resource('package', PackageController::class);
     Route::resource('property', PropertyController::class);
+
+
+
+    Route::get('image/{id}', [AdminImageController::class, 'image'])->name('image');
+    Route::post('storeImage/', [AdminImageController::class, 'storeImage'])->name('storeImage');
+    Route::delete('delete/image/{id}', [AdminImageController::class, 'deleteImage'])->name('deleteImage');
 
     //Trades Routes
     Route::get('open/trades/history', [AdminTradesController::class, 'openTrades'])->name('trades.open');

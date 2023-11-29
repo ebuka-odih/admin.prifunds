@@ -60,7 +60,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-
+                                    <label class="form-label" for="password">Passcode</label>
                                     <div class="form-control-wrap">
                                         <a href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
                                             <em class="passcode-icon icon-show icon ni ni-eye"></em>
@@ -69,7 +69,7 @@
                                         <input type="password" name="password" class="form-control form-control-lg" id="password" placeholder="Enter your passcode">
                                     </div>
                                     <div class="form-label-group">
-                                        <label class="form-label" for="password">Passcode</label>
+
                                         @if (Route::has('password.request'))
                                             <a href="{{ route('password.request') }}" class="link link-primary link-sm"><i class="fa fa-lock"></i> Forgot password?</a><br>
                                         @endif
